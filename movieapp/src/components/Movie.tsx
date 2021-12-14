@@ -1,5 +1,5 @@
 import React from "react";
-import { Image } from "../styles/subcomponets";
+import { Image, MovieContainer, TitleAndRating } from "../styles/subcomponets";
 
 export interface MovieData {
   title: string;
@@ -17,19 +17,18 @@ const Movie: React.FC<MovieData> = ({
   const IMG_API: string = "https://image.tmdb.org/t/p/w1280";
   return (
     <>
-      <div>
+      <MovieContainer>
         <div>
           <Image src={IMG_API + posterPath} alt={title} />
         </div>
-        <div>
-          <p>
-            {title} {voteAverage}
-          </p>
-        </div>
-        <div>
+        <TitleAndRating>
+          <p>{title}</p>
+          <p>{voteAverage}</p>
+        </TitleAndRating>
+        {/* <div>
           <p>{overview}</p>
-        </div>
-      </div>
+        </div> */}
+      </MovieContainer>
     </>
   );
 };

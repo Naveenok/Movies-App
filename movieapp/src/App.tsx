@@ -3,6 +3,7 @@ import Movie from "./components/Movie";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { MovieData } from "./components/Movie";
+import { MoviesList } from "./styles/subcomponets";
 
 const App = () => {
   const FEATURED_API: string =
@@ -35,8 +36,10 @@ const App = () => {
 
   return (
     <>
-      {movies.length > 0 &&
-        movies.map((movie, i) => <Movie key={i} {...movie} />)}
+      <MoviesList>
+        {movies.length > 0 &&
+          movies.map((movie, i) => <Movie key={i} {...movie} />)}
+      </MoviesList>
     </>
   );
 };
