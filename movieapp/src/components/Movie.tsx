@@ -1,5 +1,11 @@
 import React from "react";
-import { Image, MovieContainer, TitleAndRating } from "../styles/subcomponets";
+import {
+  Description,
+  Image,
+  MovieAndRating,
+  MovieContainer,
+  TitleAndRating,
+} from "../styles/subcomponets";
 
 export interface MovieData {
   title: string;
@@ -18,16 +24,14 @@ const Movie: React.FC<MovieData> = ({
   return (
     <>
       <MovieContainer>
-        <div>
+        <MovieAndRating>
           <Image src={IMG_API + posterPath} alt={title} />
-        </div>
-        <TitleAndRating>
-          <p>{title}</p>
-          <p>{voteAverage}</p>
-        </TitleAndRating>
-        {/* <div>
-          <p>{overview}</p>
-        </div> */}
+          <TitleAndRating>
+            <p>{title}</p>
+            <p>{voteAverage}</p>
+          </TitleAndRating>
+        </MovieAndRating>
+        <Description>{overview}</Description>
       </MovieContainer>
     </>
   );

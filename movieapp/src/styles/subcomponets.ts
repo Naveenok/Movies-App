@@ -6,25 +6,44 @@ export const MoviesList = styled.div`
   background-color: black;
 `;
 
-export const MovieContainer = styled.div`
-  // border: 1px solid black;
-  width: 250px;
-  height: fit-content;
-  margin: 10px;
-  background-color: white;
-  border-radius: 15px;
+export const Description = styled.div`
+  color: white;
+  display: none;
+  padding: 20px;
 `;
-
 export const Image = styled.img`
   width: 100%;
   height: 100%;
   border-radius: 15px 15px 0px 0px;
 `;
 
+export const MovieAndRating = styled.div``;
+
+export const MovieContainer = styled.div`
+  width: 250px;
+  height: auto;
+  margin: 10px;
+  background-color: white;
+  border-radius: 15px;
+  transition: transform 2s ease-in-out;
+
+  &:hover {
+    background-color: black;
+    transform: rotate(360deg);
+    cursor: pointer;
+  }
+  &:hover ${MovieAndRating} {
+    display: none;
+  }
+  &:hover ${Description} {
+    display: block;
+  }
+`;
+
 export const TitleAndRating = styled.div`
+  padding: 10px;
   margin-top: -5px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  // border: 1px solid red;
 `;
