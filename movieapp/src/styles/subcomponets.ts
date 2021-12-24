@@ -47,3 +47,18 @@ export const TitleAndRating = styled.div`
   flex-direction: row;
   justify-content: space-around;
 `;
+
+export const MovieSearchContainer = styled.div`
+  padding: 20px 20px;
+  display: flex;
+  justify-content: flex-end;
+`;
+export const MovieSearch = styled.input`
+  height: 30px;
+  border-radius: 15px;
+  padding-left: 20px;
+`;
+
+export const AppContainer = styled.div`
+  background: black;
+`;
